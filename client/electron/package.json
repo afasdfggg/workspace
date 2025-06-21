@@ -1,0 +1,38 @@
+{
+  "name": "insightful-time-tracker",
+  "version": "1.0.0",
+  "description": "Desktop time tracking client for Insightful",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Insightful",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.4.0"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "electron-store": "^8.1.0",
+    "moment": "^2.29.4",
+    "screenshot-desktop": "^1.15.0"
+  },
+  "build": {
+    "appId": "com.insightful.timetracker",
+    "productName": "Insightful Time Tracker",
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Office"
+    }
+  }
+}
